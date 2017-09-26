@@ -1,0 +1,36 @@
+<div class="figure"><img src="/assets/clock.png"></div>
+<div class="content">
+
+  <h1>Sign up!</h1>
+
+  <!-- Show an error when it occurs -->
+  <div class="error">{{ error }}</div>
+
+  <div class="form-line">
+
+     <!-- Look at this lovely data binding! -->
+    <input type="text" placeholder="username" [(ngModel)]="username">
+  </div>
+  
+  
+
+  <div class="form-line">
+      <!-- Look at this lovely data binding! -->
+    <input type="password" placeholder="password" [(ngModel)]="password">
+  </div>
+
+</div>
+
+<div class="actions">
+
+  <!-- When disableButton is true, it disables the button! -->
+
+  <!-- Now, the button will be disabled based on
+       the username and password values, and will call
+       the submitSignup() method when the button
+       is active and a person clicks it. -->
+     <button class="cta"
+       [disabled]="disableButton"
+       (click)="submitSignup()">REGISTER!</button>
+
+</div>
